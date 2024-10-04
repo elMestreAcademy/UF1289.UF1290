@@ -1,8 +1,9 @@
 // Clase Pato
 class Pato {
-  constructor(tipo, nombre, edad, genero, imagen) {
+  constructor(tipo, nombre, apellido, edad, genero, imagen) {
     this.tipo = tipo || "UNDEFINED";
     this.nombre = nombre || "UNDEFINED";
+    this.apellido = apellido || "UNDEFINED";
     this.edad = edad || "UNDEFINED";
     this.genero = genero || "UNDEFINED";
     this.imagen = imagen || "undefined.png";
@@ -20,13 +21,19 @@ class Pato {
 
   // Método que genera la representación en HTML de cada pato
   generarHTML(relacion = "") {
+
+    let apellidoAMostrar = ""
+    if (this.apellido != "UNDEFINED") {
+      apellidoAMostrar = ` ${this.apellido}`
+    }
+
     return `
       <div class="pato">
           <img src="/img/${this.imagen}" alt="${
       this.nombre
     }" loading="lazy" class="pato-img">
           <div class="pato-info">
-              <h3>${this.nombre}${relacion ? `<br>(${relacion})` : ""}</h3>
+              <h3>${this.nombre}${apellidoAMostrar}${relacion ? `<br>(${relacion})` : ""}</h3>
               <p>Edad: ${this.edad}</p>
               <p>Género: ${this.genero}</p>
           </div>
@@ -80,12 +87,12 @@ class PatoCiudad {
 
   cargarFicheroJson(fichero = "patociudad.json") {
     function crearArbolDesdeJson(datos) {
-      const { id, tipo, nombre, edad, genero, imagen, hijos, pareja, fama } =
+      const { id, tipo, nombre, apellido, edad, genero, imagen, hijos, pareja, fama } =
         datos;
 
       const pato =
         tipo == "pato"
-          ? new Pato(tipo, nombre, edad, genero, imagen)
+          ? new Pato(tipo, nombre, apellido, edad, genero, imagen)
           : new Pato();
 
       // Si tiene una pareja, la agregamos
@@ -93,6 +100,7 @@ class PatoCiudad {
         const parejaObjeto = new Pato(
           pareja.tipo,
           pareja.nombre,
+          pareja.apellido,
           pareja.edad,
           pareja.genero,
           pareja.imagen

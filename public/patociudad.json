@@ -1,14 +1,16 @@
 {
     "id": 1,
     "tipo": "pato",
-    "nombre": "Molly Mallard",
+    "nombre": "Molly",
+    "apellido": "Mallard",
     "edad": 105,
     "genero": "Femenino",
     "imagen": "molly.png",
     "pareja": {
         "id": 2,
         "tipo": "pato",
-        "nombre": "'Dirty' Dingus McDuck",
+        "nombre": "'Dirty' Dingus",
+        "apellido": "McDuck",
         "edad": 114,
         "genero": "Masculino",
         "imagen": "dirty.png"
@@ -16,7 +18,8 @@
     "hijos": [{
         "id": 3,
         "tipo": "pato",
-        "nombre": "Fergus McPato",
+        "nombre": "Fergus",
+        "apellido": "McPato",
         "edad": 89,
         "genero": "Masculino",
         "imagen": "fergus.png",
@@ -24,7 +27,8 @@
             {
                 "id": 4,
                 "tipo": "famoso",
-                "nombre": "Gilito McPato",
+                "nombre": "Gilito",
+                "apellido": "McPato",
                 "edad": 70,
                 "genero": "Masculino",
                 "imagen": "gilito.png",
@@ -55,14 +59,16 @@
             {
                 "id": 8,
                 "tipo": "pato",
-                "nombre": "Matilda McPato",
+                "nombre": "Matilda",
+                "apellido": "McPato",
                 "edad": 62,
                 "genero": "Femenino",
                 "imagen": "matilda.png",
                 "pareja": {
                     "id": 9,
                     "tipo": "pato",
-                    "nombre": "Ludwig Von Drake",
+                    "nombre": "Ludwig",
+                    "apellido": "Von Drake",
                     "edad": 76,
                     "genero": "Masculino",
                     "imagen": "Ludwig.png"
@@ -71,7 +77,8 @@
             {
             "id": 10,
             "tipo": "pato",
-            "nombre": "Hortensia McPato",
+            "nombre": "Hortensia",
+            "apellido": "McPato",
             "edad": 55,
             "genero": "Femenino",
             "imagen": "hortensia.png",
@@ -79,7 +86,8 @@
                 {
                     "id": 11,
                     "tipo": "pato",
-                    "nombre": "Della Pato",
+                    "nombre": "Della",
+                    "apellido": "Pato",
                     "edad": 30,
                     "genero": "Femenino",
                     "imagen": "della.png",
@@ -87,7 +95,8 @@
                         {
                             "id": 12,
                             "tipo": "pato",
-                            "nombre": "Juanito Pato",
+                            "nombre": "Juanito",
+                            "apellido": "Pato",
                             "edad": 10,
                             "genero": "Masculino",
                             "imagen": "juanito.png",
@@ -96,7 +105,8 @@
                         {
                             "id": 13,
                             "tipo": "pato",
-                            "nombre": "Jorgito Pato",
+                            "nombre": "Jorgito",
+                            "apellido": "Pato",
                             "edad": 10,
                             "genero": "Masculino",
                             "imagen": "jorgito.png",
@@ -105,7 +115,8 @@
                         {
                             "id": 14,
                             "tipo": "pato",
-                            "nombre": "Jaimito Pato",
+                            "nombre": "Jaimito",
+                            "apellido": "Pato",
                             "edad": 10,
                             "genero": "Masculino",
                             "imagen": "jaimito.png",
@@ -116,7 +127,8 @@
                 {
                     "id": 15,
                     "tipo": "famoso",
-                    "nombre": "Pato Donald",
+                    "nombre": "Pato",
+                    "apellido": "Donald",
                     "edad": 25,
                     "genero": "Masculino",
                     "imagen": "donald.png",
@@ -135,7 +147,8 @@
             "pareja": {
                 "id": 17,
                 "tipo": "pato",
-                "nombre": "Quackmore Pato",
+                "nombre": "Quackmore",
+                "apellido": "Pato",
                 "edad": 58,
                 "genero": "Masculino",
                 "imagen": "quackmore.png"
@@ -144,7 +157,8 @@
         "pareja": {
             "id": 18,
             "tipo": "pato",
-            "nombre": "Downy O'Drake",
+            "nombre": "Downy",
+            "apellido": "O'Drake",
             "edad": 87,
             "genero": "Femenino",
             "imagen": "downy.png"
