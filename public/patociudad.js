@@ -27,11 +27,18 @@ class Pato {
       apellidoAMostrar = ` ${this.apellido}`
     }
 
+    // Menos elegante
+    /*
+    let color = ""
+    if (this.genero == "Masculino") {color = "masculino"}
+    if (this.genero == "Femenino") {color = "femenino"}
+    */
+
     return `
       <div class="pato">
           <img src="/img/${this.imagen}" alt="${
       this.nombre
-    }" loading="lazy" class="pato-img">
+    }" loading="lazy" class="pato-img ${this.genero.toLowerCase()}">
           <div class="pato-info">
               <h3>${this.nombre}${apellidoAMostrar}${relacion ? `<br>(${relacion})` : ""}</h3>
               <p>Edad: ${this.edad}</p>
