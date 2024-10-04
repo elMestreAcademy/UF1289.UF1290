@@ -49,6 +49,36 @@ class Pato {
   }
 }
 
+class PatoFamoso extends Pato {
+  constructor(tipo, nombre, apellido, edad, genero, imagen, fama) {
+    super(tipo, nombre, apellido, edad, genero, imagen)
+    this.fama = fama || "UNDEFINED";
+  }
+
+  // Método que genera la representación en HTML de cada pato
+  generarHTML(relacion = "") {
+
+    let apellidoAMostrar = ""
+    if (this.apellido != "UNDEFINED") {
+      apellidoAMostrar = ` ${this.apellido}`
+    }
+
+    return `
+      <div class="pato">
+          <img src="/img/${this.imagen}" alt="${
+      this.nombre
+    }" loading="lazy" class="pato-img ${this.genero.toLowerCase()}">
+          <div class="pato-info">
+              <h3>${this.nombre}${apellidoAMostrar}${relacion ? `<br>(${relacion})` : ""}</h3>
+              <p>Edad: ${this.edad}</p>
+              <p>Género: ${this.genero}</p>
+              <p>Fama: ${this.fama}</p>
+          </div>
+      </div>
+    `;
+  }
+}
+
 // Clase Familia
 class Familia {
   constructor() {
@@ -100,7 +130,7 @@ class PatoCiudad {
       const pato =
         tipo == "pato"
           ? new Pato(tipo, nombre, apellido, edad, genero, imagen)
-          : new Pato();
+          : new PatoFamoso(tipo, nombre, apellido, edad, genero, imagen, fama);
 
       // Si tiene una pareja, la agregamos
       if (pareja) {
